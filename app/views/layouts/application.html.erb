@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= @pagetitle %></title>
+		  	<%= stylesheet_link_tag    "application", :media => "all" %>
+  			<%= javascript_include_tag "application" %>
+  			<%= csrf_meta_tags %>
+  </head>
+  <body>
+		<div id='pagewrapper'>
+			<div id='header'>
+				<p>GolBloG - The best blog on the web!</p>
+		  </div>
+			<div id='navbar'>
+				<ul>
+					<li><%= link_to 'Home', :root %></li>
+					<li><%= link_to 'New Post', {:controller => 'posts', :action => 'new'} %></li>
+			    	<li><%= link_to 'User Admin', {:controller => 'users', :action => 'index'} %></li>
+			    	<li><%= link_to 'Sign Up', {:controller => 'users', :action => 'new'} %></li>
+				</ul>
+		  <div>
+		</div>
+		<div id='content'>
+      <%= yield %>
+		</div>
+		<div id='footer'>
+			<p>GolBlog 2013. All rights reserved.</p>
+		</div>
+  </body>
+</html>
