@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 gem 'mysql2'
-gem 'carrierwave'
+
 
 
 # Gems used only for assets and not required
@@ -38,3 +38,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+gem 'carrierwave'

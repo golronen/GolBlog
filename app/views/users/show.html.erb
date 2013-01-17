@@ -15,6 +15,11 @@
   <%= @user.password %>
 </p>
 
+<p>
+	<b>Avatar:</b>
+	<%= image_tag(@user.avatar, :size => "40x40") %>
+</p>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
